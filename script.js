@@ -452,3 +452,33 @@ if (botonTIR) {
     });
 }
 
+
+/* Reducir encabezado al desplazarse */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cabecera = document.querySelector(".cabecera-fija");
+
+    if (!cabecera) return;
+
+    let compacta = false;
+
+    function actualizarCabecera() {
+        const desplazar = window.scrollY;
+
+        if (!compacta && desplazar > 180) {
+            compacta = true;
+            cabecera.classList.add("compacta");
+        } else if (compacta && desplazar < 80) {
+            compacta = false;
+            cabecera.classList.remove("compacta");
+        }
+    }
+
+    window.addEventListener("scroll", actualizarCabecera, {
+        passive: true
+    });
+
+    actualizarCabecera();
+});
+
+
