@@ -533,3 +533,56 @@ html {
     }
 }
 
+
+/* ==========================================
+   MENU HORIZONTAL DESLIZABLE EN CELULARES
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    .cabecera-fija nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        gap: 6px;
+        padding: 8px 12px;
+
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    /* Ocultar barra de desplazamiento */
+    .cabecera-fija nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Cada enlace mantiene su espacio */
+    .cabecera-fija nav a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        flex: 0 0 auto;
+        white-space: nowrap;
+
+        font-size: 14px;
+        padding: 9px 12px;
+    }
+
+    /* Cuando el encabezado se compacta */
+    .cabecera-fija.compacta nav {
+        padding: 5px 10px;
+    }
+
+    .cabecera-fija.compacta nav a {
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+}
+
