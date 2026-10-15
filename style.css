@@ -479,3 +479,57 @@ html {
     scroll-padding-top: 250px;
 }
 
+
+/* ENCABEZADO COMPACTO AL DESPLAZARSE */
+
+.cabecera-fija header,
+.cabecera-fija .logo-umg,
+.cabecera-fija .encabezado-textos h1,
+.cabecera-fija .encabezado-textos p {
+    transition: all 0.25s ease;
+}
+
+.cabecera-fija.compacta header {
+    padding: 8px 15px;
+}
+
+.cabecera-fija.compacta .logo-umg {
+    width: 45px;
+    height: 45px;
+    max-width: 45px;
+    max-height: 45px;
+}
+
+.cabecera-fija.compacta .encabezado-textos h1 {
+    font-size: 21px;
+    margin: 0;
+}
+
+.cabecera-fija.compacta .encabezado-textos p {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .cabecera-fija.compacta .encabezado-umg {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .cabecera-fija.compacta .encabezado-textos {
+        text-align: left;
+    }
+
+    .cabecera-fija.compacta .encabezado-textos h1 {
+        font-size: 17px;
+    }
+
+    .cabecera-fija.compacta nav {
+        padding: 4px;
+    }
+
+    .cabecera-fija.compacta nav a {
+        font-size: 13px;
+        padding: 5px 7px;
+    }
+}
+
