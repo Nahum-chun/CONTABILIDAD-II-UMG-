@@ -1,0 +1,481 @@
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f6fa;
+    color: #263445;
+    line-height: 1.6;
+}
+
+/* ENCABEZADO */
+header {
+    background: linear-gradient(135deg, #102d50, #245a91);
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+header h1 {
+    font-size: clamp(28px, 5vw, 44px);
+    margin: 0 0 12px;
+}
+
+header p {
+    margin: 6px 0;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+nav {
+    background-color: #102d50;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background-color: #d5a547;
+    color: #102d50;
+}
+
+/* CONTENIDO PRINCIPAL */
+main {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    padding: 35px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #d5a547;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    scroll-margin-top: 20px;
+}
+
+section h2 {
+    color: #102d50;
+    margin-top: 0;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #102d50;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+@media (max-width: 600px) {
+    header {
+        padding: 40px 15px;
+    }
+
+    nav {
+        gap: 4px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    section {
+        padding: 22px;
+    }
+}
+
+
+/* DISEÑO DE TABLA COMPARATIVA */
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.tabla-contenedor table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+}
+
+.tabla-contenedor th,
+.tabla-contenedor td {
+    padding: 15px;
+    border: 1px solid #dce3eb;
+    text-align: left;
+    vertical-align: top;
+}
+
+.tabla-contenedor th {
+    background-color: #102d50;
+    color: white;
+}
+
+.tabla-contenedor tbody tr:nth-child(even) {
+    background-color: #f3f6fa;
+}
+
+.tabla-contenedor tbody tr:hover {
+    background-color: #e6eef8;
+}
+
+
+/* CALCULADORA DE RENTABILIDAD */
+
+.calculadora {
+    background-color: #f3f6fa;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 20px;
+    border: 1px solid #dce3eb;
+}
+
+.calculadora label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.calculadora input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #b9c7d8;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.calculadora button {
+    background-color: #102d50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.calculadora button:hover {
+    background-color: #245a91;
+}
+
+#resultado-rentabilidad {
+    font-size: 20px;
+    font-weight: bold;
+    color: #102d50;
+}
+
+
+
+/* =====================================
+   RECURSOS DIDÁCTICOS
+===================================== */
+
+#recursos .recurso {
+    background: #f4f7fb;
+    border-left: 5px solid #d6a13d;
+    border-radius: 10px;
+    padding: 24px;
+    margin: 22px 0;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+#recursos .recurso:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+#recursos .recurso h4 {
+    color: #102e52;
+    font-size: 21px;
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+#recursos .recurso p {
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+#recursos .recurso p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    #recursos .recurso {
+        padding: 18px;
+    }
+
+    #recursos .recurso h4 {
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+/* =====================================
+   EXPERIENCIA UNIVERSITARIA
+===================================== */
+
+#universidad h3 {
+    color: #102e52;
+    margin-top: 35px;
+}
+
+.galeria-universitaria {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+.foto-universitaria {
+    background: #f4f7fb;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #dce4ee;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.foto-universitaria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.foto-pendiente {
+    height: 210px;
+    background: #e5ebf3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #52657c;
+    font-weight: bold;
+    border-bottom: 4px solid #d6a13d;
+}
+
+.foto-universitaria h4 {
+    color: #102e52;
+    margin: 20px 18px 10px;
+}
+
+.foto-universitaria p {
+    margin: 0 18px 22px;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .galeria-universitaria {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .galeria-universitaria {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   MENÚ COMPACTO Y NAVEGACIÓN PERMANENTE
+   ========================================== */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 15px;
+}
+
+/* Espaciado de los enlaces */
+nav a {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+}
+
+/* Evita que el menú tape los títulos al navegar */
+html {
+    scroll-padding-top: 85px;
+}
+
+
+/* ENCABEZADO MÁS COMPACTO */
+
+header {
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 36px;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* MENÚ COMPACTO */
+nav {
+    padding: 5px 10px;
+}
+
+nav a {
+    padding: 6px 10px;
+}
+
+
+/* LOGO UMG - TAMAÑO CONTROLADO */
+
+.encabezado-umg .logo-umg {
+    width: 80px;
+    height: 80px;
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* ========================================
+   ENCABEZADO UMG - DISEÑO HORIZONTAL
+   ======================================== */
+
+header {
+    padding: 18px 20px;
+}
+
+header .encabezado-umg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* LOGOTIPO UNIVERSITARIO */
+header .logo-umg {
+    width: 85px;
+    height: 85px;
+    max-width: 85px;
+    max-height: 85px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* TEXTOS */
+header .encabezado-textos {
+    text-align: left;
+}
+
+header .encabezado-textos h1 {
+    font-size: 34px;
+    line-height: 1.2;
+    margin: 0 0 8px;
+}
+
+header .encabezado-textos p {
+    font-size: 16px;
+    margin: 4px 0;
+}
+
+/* ADAPTACIÓN A CELULARES */
+@media (max-width: 600px) {
+    header .encabezado-umg {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header .encabezado-textos {
+        text-align: center;
+    }
+
+    header .encabezado-textos h1 {
+        font-size: 26px;
+    }
+}
+
+
+
+/* ==========================================
+   ENCABEZADO Y MENÚ SIEMPRE VISIBLES
+   ========================================== */
+
+/* Encabezado principal */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+}
+
+/* Menú debajo del encabezado */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Mantener navegación visible */
+nav a {
+    text-decoration: none;
+}
+
+/* Desplazamiento suave */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 250px;
+}
+
+/* ENCABEZADO COMPLETO FIJO */
+
+.cabecera-fija {
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+}
+
+/* Evita conflictos entre header y nav */
+
+.cabecera-fija header,
+.cabecera-fija nav {
+    position: static;
+}
+
+/* Navegación suave */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 250px;
+}
+
