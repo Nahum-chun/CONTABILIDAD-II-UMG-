@@ -586,3 +586,53 @@ html {
     }
 }
 
+/* CORRECCIÓN DE GALERÍA UNIVERSITARIA */
+
+#universidad {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#universidad .galeria-universitaria {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 100%;
+    margin: 25px 0 35px;
+    box-sizing: border-box;
+}
+
+#universidad .galeria-universitaria img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+    #universidad .galeria-universitaria {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    #universidad .galeria-universitaria {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    #universidad .galeria-universitaria img {
+        width: 100%;
+        height: auto;
+        max-height: 420px;
+        object-fit: contain;
+        background: #f1f4f9;
+    }
+}
+
+
