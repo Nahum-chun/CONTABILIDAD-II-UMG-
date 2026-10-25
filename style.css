@@ -18,7 +18,7 @@ body {
 
 /* ENCABEZADO */
 header {
-    background: linear-gradient(135deg, #102d50, #245a91);
+    background: linear-gradient(135deg, #102d50, #245a91);                
     color: white;
     text-align: center;
     padding: 65px 20px;
@@ -678,4 +678,31 @@ html {
         font-size: 14px;
     }
 }
+/* ==========================================
+   CORRECCIÓN DE SALTO VISUAL EN CELULARES
+   ========================================== */
 
+@media (max-width: 600px) {
+
+    /* Evitar animaciones de tamaño en el encabezado */
+    .cabecera-fija header,
+    .cabecera-fija .logo-umg,
+    .cabecera-fija .encabezado-textos h1,
+    .cabecera-fija .encabezado-textos p {
+        transition: none;
+    }
+
+    /* Mantener estable la altura del menú */
+    .cabecera-fija nav,
+    .cabecera-fija.compacta nav {
+        min-height: 54px;
+        padding: 5px 10px;
+    }
+
+    /* Mantener el mismo tamaño de los enlaces */
+    .cabecera-fija nav a,
+    .cabecera-fija.compacta nav a {
+        font-size: 14px;
+        padding: 7px 10px;
+    }
+}
